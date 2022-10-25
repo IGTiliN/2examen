@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAQUETACION</title>
+    <link rel="stylesheet" href="miestilo.css">
+</head>
+<body>
+    <div class="principal">
+            <header id="main-header">
+                <label for="">Bienvenido</label>
+                <a for="" id="r"></a>
+                <nav>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Acerca de Nosotros</a></li>
+                        <li><a href="">Galeria</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+        
+            </header>
+        <figure>
+            <img width="800px" height="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbmmXBc_jIsEw4HXOgicVE_v_gQzVpgIWDKQ&usqp=CAU">
+        </figure>       
+        <main>
+            <section>
+                <article>
+                    <label for="">INICIAR SESION</label>
+                    <br>
+                    <br>
+                    <input type="text" id="usuario" placeholder="Ingrese nombre de usuario">
+                    <br>
+                    <br>
+                    <button onclick="Registrar()">INGRESAR</button>
+                </article>
+                <article>
+                    <img width="100%" height="100%" src="https://topesdegama.com/app/uploads-topesdegama.com/2021/03/AperTablets.jpg" alt="">
+                </article>
+                <article>
+                    <h3>Titulo</h3>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea qui quisquam sed vitae ipsa minus dolor officiis adipisci, illo eligendi necessitatibus omnis, tenetur id beatae molestias exercitationem tempora asperiores porro.</article>
+            </section>
+        </main>
+        <main>
+            <section>
+                <article>
+                    <ul class="itenes" >
+                        <li>Item1</li>
+                        <li>Item2</li>
+                        <li>Item3</li>
+                        <li>Item4</li>
+                        <li>Item5</li>
+                    </ul>
+                </article>
+                <article>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed reprehenderit consequatur quas quos dignissimos voluptatibus molestiae architecto, eos ex nostrum quasi aliquam ad mollitia! Cumque quo voluptate eveniet qui veritatis.</p>
+                </article>
+                <article>
+                        <label form="num1">Ingrese el monto :</label>
+                        <br>
+                        <input type="number" name="num1" id="monto" value="0" placeholder="        ">
+                        <br>
+                        <br>
+                        <label form="num1" id="resultado"> RESULTADO </label>
+                        <br>
+                        <input type="number" name="resul" disabled id="resul">
+                        <button onclick="Convertir()">CONVERTIR</button>
+                </article>
+            </section>
+        </main>
+    </div>
+    <script >
+        function Registrar(){
+            var nom=document.getElementById("usuario").value;
+            document.getElementById("r").innerHTML=nom;
+        }
+        function Convertir(){
+                    var n1=parseInt(document.getElementById("monto").value);
+                    var r;
+                    r=n1*6.88;
+                    document.getElementById("resul").value=r;
+                    document.getElementById("resul").style.textAlign= "center";
+                    document.getElementById("resultado").innerHTML="Bolivianos" ;
+        }	
+        </script>
+</body>
+</html>
